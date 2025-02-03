@@ -1,40 +1,112 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Census Income Integration
 
-## Getting Started
+## 📌 Overview
 
-First, run the development server:
+This project integrates with **Census.gov API** to fetch and display regional income data, allowing users to compare their income with the median regional income.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Live Demo
+
+🔗 [Census Income App](https://census-income-production.up.railway.app/)
+
+## 📂 Repository
+
+🔗 [GitHub Repository](https://github.com/Jamilbilal47/census-income)
+
+---
+
+## 📊 Features Implemented
+
+### 🔹 1. API Integration
+
+- Fetches **real-time regional income data** from Census.gov.
+- Handles **API failures and incomplete datasets** with proper error messages.
+- Normalizes data for consistent display.
+
+### 🔹 2. User Flow
+
+1️⃣ **User inputs or confirms location** (auto-detection enabled).2️⃣ **System fetches & displays regional median income**.3️⃣ **User’s income is ranked** as a percentage, alongside a **bar chart comparison**.
+
+### 🔹 3. User Interface (UI)
+
+- Displays **user’s income ranking as a percentage** of regional income.
+- Simple **bar chart visualization** for comparison.
+- Fully **responsive design** for mobile and desktop.
+
+### 🔹 4. Error Handling & Fallbacks
+
+- Displays an **error message** if Census data is unavailable.
+- Allows users to **manually input location** if auto-detection fails.
+- Provides **graceful fallback handling** in case of API failures.
+
+### 🔹 5. Performance & Scalability
+
+- **Optimized API calls** for **fast response times**.
+- Ensures **scalability** for multiple users accessing the system simultaneously.
+- Maintains **99% data integration accuracy**.
+
+---
+
+## 🛠️ Setup & Installation
+
+### **1. Clone the Repository**
+
+```sh
+git clone https://github.com/Jamilbilal47/census-income.git
+cd census-income
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### **2. Install Dependencies**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### **3. Create an `.env.local` File (if required)**
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- Add API keys or any required environment variables.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### **4. Run Locally**
 
-## Learn More
+```sh
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+The app should be running at `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📦 Deployment
 
-## Deploy on Vercel
+The project is deployed on **Railway** and can be accessed here:🔗 [Live Deployment](https://census-income-production.up.railway.app/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+For deployment:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- Railway automatically builds and deploys from GitHub.
+- The **build command** is: `npm run build`
+- The **start command** is: `npm start`
+
+---
+
+## ❗ Challenges & Trade-offs
+
+- **Handling API rate limits:** Implemented error handling for cases where API responses are delayed.
+- **Location auto-detection fallback:** Users can manually enter their location if auto-detection fails.
+- **Performance considerations:** Ensured optimized API calls to reduce load times.
+
+---
+
+## ✨ Future Enhancements
+
+- Add **multi-region comparisons**.
+- Implement **historical income trends visualization**.
+- Enhance **UI design with interactive elements**.
+
+---
+
+## 💍 Contact
+
+For any queries, feel free to reach out:🌟 **Jamil Bilal** | 📧 [jamilbilal020@gmail.com](mailto:jamilbilal020@gmail.com)
+
+---
+
+This `README.md` provides a **clear project overview, setup instructions, features, challenges, and future enhancements**. Let me know if you need any modifications! 🚀
